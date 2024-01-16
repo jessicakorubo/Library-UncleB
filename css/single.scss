@@ -1,0 +1,334 @@
+body {
+    margin: 1rem auto;
+    width: 99%;
+    height: max-content;
+    background-color: black;
+    color: white;
+
+    .whole-section {
+        .upper-side {
+            padding: 1.7rem 1.4rem;
+            // height: 100%;
+            display: flex;
+            font-family: "Nunito", sans-serif;
+            justify-content: space-around;
+
+            .left-books-section {
+                display: flex;
+
+                .book-con {
+                    .book-image {
+                        img {
+                            width: 230px;
+                            height: 300px;
+                        }
+                    }
+                }
+
+                .divider {
+                    display: flex;
+                    height: 30px;
+                    flex-direction: row;
+                    margin-left: 40px;
+                    height: 100vh;
+                    width: 10px;
+                    background: linear-gradient(to right,
+                            rgb(130, 89, 241),
+                            rgb(253, 89, 60));
+                }
+            }
+
+            .right-books-section {
+                margin-top: 3rem;
+
+                .upper-right-section {
+                    box-shadow: 0 4px 8px 0 rgba(243, 241, 241, 0.2),
+                        0 6px 20px 0 rgba(250, 247, 247, 0.19);
+                    // margin-left: 100px;
+                    border-radius: 10px;
+                    width: 800px;
+                    display: flex;
+                    justify-content: space-between;
+
+                    padding: 2rem;
+
+                    .book-details {
+                        width: max-content;
+
+                        .details-column {
+                            // padding: 1rem;
+
+                            .view {
+                                display: flex;
+                                gap: 1rem;
+
+                                #date_published {
+                                    width: max-content;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    padding: 10px;
+                                    border: 2px solid green;
+                                    background-color: green;
+                                    color: white;
+                                    border-radius: 10px;
+                                    text-align: center;
+                                    height: 30px;
+
+                                    p {
+                                        font-weight: 700;
+                                        margin-left: 10px;
+                                    }
+                                }
+
+                                .delete_book {
+                                    cursor: pointer;
+                                    background-color: rgb(248, 79, 79);
+                                    justify-content: center;
+                                    align-items: center;
+                                    display: flex;
+                                    border-radius: 10px;
+
+                                    &:hover {
+                                        background-color: rgb(255, 115, 0);
+                                    }
+
+                                    .button-div {
+                                        position: relative;
+
+                                        button.delete {
+                                            color: white;
+                                            cursor: pointer;
+                                            border: none;
+                                            background-color: inherit;
+                                            width: 100px;
+                                            padding: 10px;
+                                            height: 100%;
+                                        }
+
+                                        .popup {
+
+                                            .qtn {
+                                                animation-name: warning;
+                                                animation-iteration-count: 4;
+                                                animation-duration: 0.5s;
+                                                animation-timing-function: ease-in-out;
+                                            }
+
+                                            position: absolute;
+                                            top: calc(100% + 30px);
+                                            left: -150%;
+                                            z-index: 1;
+                                            display: none;
+                                            background: linear-gradient(184deg,
+                                                rgba(80, 58, 36, 1) 17%,
+                                                rgba(163, 112, 75, 1) 50%,
+                                                rgba(156, 110, 75, 1) 75%,
+                                                #c7935d 86%);
+                                            width: 250px;
+                                            border-radius: 10px;
+                                            height: fit-content;
+                                            color: white;
+                                            padding: 1rem;
+                                            text-align: center;
+
+                                            &.active {
+                                                display: block;
+                                            }
+
+                                            .delete-options {
+                                                display: flex;
+                                                justify-content: center;
+                                                // gap: 0.5rem;
+                                                // padding: 1rem;
+
+                                                a {
+                                                    color: white;
+                                                    text-decoration: none;
+                                                    border: 1px solid white;
+                                                    padding: 0 0.5rem;
+                                                    border-radius: 5px;
+                                                }
+
+                                                input {
+                                                    border-top: 10px;
+                                                    padding: 5px 10px;
+                                                    border-radius: 10px;
+                                                    background-color: #e02a12;
+                                                    border: none;
+                                                    margin-top: 20px;
+                                                    color: white;
+
+                                                    &:hover {
+                                                        stroke-opacity: 0.5;
+                                                    }
+
+                                                    &.submit-cancel {
+                                                        background-color: red;
+                                                        color: black;
+                                                    }
+
+                                                }
+
+                                                input#delete-book {
+                                                    background-color: red;
+
+                                                    &:hover {
+                                                        box-shadow: 2px 5px 12px red;
+                                                    }
+                                                }
+
+                                                input#cancel-book {
+                                                    background-color: #232223;
+                                                    animation-name: cancel;
+                                                    animation-iteration-count: infinite;
+                                                    animation-duration: 0.5s;
+                                                    animation-timing-function: ease-in-out;
+                                                    animation-delay: 2.3s;
+
+                                                    &:hover {
+                                                        box-shadow: 2px 5px 12px black;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .unavailable {
+                    border: 5px solid salmon;
+                    border-radius: 5px;
+                    padding: 1rem;
+                    width: 250px;
+                    text-align: center;
+                    height: 220px;
+                    margin-top: 30px;
+                    color: saddlebrown;
+
+                    p:nth-of-type(2) {
+                        margin-bottom: 40px;
+                        color: white;
+                        font-weight: 600;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        background-color: green;
+                        color: white;
+                        padding: 10px 1.5rem;
+                        border-radius: 10px;
+
+                        &:hover {
+                            background-color: transparent;
+                            border: 1px solid green;
+                            color: green;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .lower-section {
+        .table {
+            margin: auto;
+            margin-top: 60px;
+            width: 90%;
+
+            .total_text {
+                text-align: center;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 30px;
+            }
+
+            table {
+                border-bottom: 2px solid green;
+                border-collapse: collapse;
+                padding: 2rem;
+
+                width: 100%;
+
+                thead {
+                    background-color: rgb(245, 95, 25);
+                    color: white;
+                    height: 3rem;
+                }
+
+                tbody {
+                    tr {
+                        height: 3rem;
+
+                        &:nth-of-type(even) {
+                            background-color: rgb(97, 96, 96);
+                        }
+
+                        td {
+                            text-align: center;
+
+                            #issue_book {
+                                // padding: 10px 2.5rem;
+
+                                input#issue-btn {
+                                    border: 2px solid rgb(245, 95, 25);
+                                    background-color: rgb(245, 95, 25);
+                                    padding: 10px 1.5rem;
+                                    border: none;
+                                    outline: none;
+                                    color: white;
+                                    font-size: 15px;
+                                    border-radius: 10px;
+
+                                    &:nth-of-type(odd) {
+                                        background-color: green;
+                                    }
+
+                                    &:hover {
+                                        background-color: transparent;
+                                        color: rgb(245, 95, 25);
+                                    }
+
+                                    &.disabled {
+                                        pointer-events: none;
+                                        background-color: grey;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // SINGLE BOOK DEISGN
+    #book_name {
+        font-size: 40px;
+        font-family: "Times New Roman", Times, serif;
+        color: rgb(245, 95, 25);
+        font-style: italic;
+    }
+}
+
+@keyframes warning {
+    from {
+        color: red;
+    }
+
+    to {
+        color: white;
+    }
+}
+
+@keyframes cancel {
+    from {
+        background-color: black;
+    }
+
+    to {
+        background-color: green;
+    }
+}

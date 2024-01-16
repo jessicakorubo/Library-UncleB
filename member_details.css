@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+   background: rgb(233, 223, 244);
+   padding: 0.7rem 2rem;
+   color: white;
+}
+.container-body {
+    display: grid;
+    grid-template-columns: max-content auto;
+}
+
+aside.left-pane {
+    /* position: fixed; */
+    padding: 1.5rem;
+    width: fit-content;
+    background-color: #041f44;
+    justify-content: cen;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 20px;
+    height: calc(100vh-0.7rem);
+}
+.logo {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+.logo img {
+    width: 60px;
+    height: 60px;
+}
+.logo h5 {
+    font-size: 18px;
+}
+.user_avatar {
+
+    margin: 30px auto 20px;
+    width: 150px;
+    padding: 20px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: rgb(203, 254, 254);
+}
+.user_avatar img{
+    width: 100%;
+}
+.user-dets {
+    opacity: 0.6;
+}
+.delete-user {
+    margin-top: 75%;
+    padding: 2rem 0;
+}
+.delete-user a {
+    color: white;
+    text-decoration: none;
+    background-color: cornflowerblue;
+    padding: 20px 30px ;
+    border-radius: 30px;
+}
+
+/* 
+RIGHT PANE */
+.right-pane {
+    margin-left: 30px;
+    display: flex;
+    color: black;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+
+}
+
+.card-component {
+    /* width: fit-content; */
+    /* flex: 2; */
+    /* flex-wrap: wrap; */
+    padding: 3rem;
+    min-width:250px;
+    text-align: center;
+    background-color: white;
+     box-shadow: 0 4px 8px 0 rgba(119, 116, 116, 0.2), 0 6px 20px 0 rgba(24, 24, 24, 0.19);
+    height: fit-content;
+    border-radius: 20px;
+}
+
+.card-component p {
+     opacity: 0.6;
+}
+
+.card-component .period {
+   
+    padding-left: 1rem;
+    border-left: 3px solid red;
+}
+
+#chartdiv {
+  width: 100%;
+
+  color: #fc0b0b;
+  height: 200px;
+}
+#chartdiv text {
+    display: flex;
+    width: 50%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.returns div {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    gap: 10px;
+}
+
+.table {
+    color: black;
+    text-align: center;
+    margin: 3rem auto 3rem;
+    width: 100%;
+}
+.table #b-book {
+    font-size: 25px;
+    margin: 30px auto;
+}
+table thead {
+    background-color: #041f44;
+   
+}
+table thead th {
+     padding: 1rem;
+     color: #ffffff;
+}
+.table table {
+    border-collapse: collapse;
+    padding: 2rem;
+    width: 100%;
+}
+tbody tr {
+    padding: 1.5rem 0;
+    text-align: center;
+    color: black;
+   
+}
+tbody td {
+ margin: 2rem auto;
+}

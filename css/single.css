@@ -1,0 +1,259 @@
+body {
+  margin: 1rem auto;
+  width: 99%;
+  height: -moz-max-content;
+  height: max-content;
+  background-color: black;
+  color: white;
+}
+body .whole-section .upper-side {
+  padding: 1.7rem 1.4rem;
+  display: flex;
+  font-family: "Nunito", sans-serif;
+  justify-content: space-around;
+}
+body .whole-section .upper-side .left-books-section {
+  display: flex;
+}
+body .whole-section .upper-side .left-books-section .book-con .book-image img {
+  width: 230px;
+  height: 300px;
+}
+body .whole-section .upper-side .left-books-section .divider {
+  display: flex;
+  height: 30px;
+  flex-direction: row;
+  margin-left: 40px;
+  height: 100vh;
+  width: 10px;
+  background: linear-gradient(to right, rgb(130, 89, 241), rgb(253, 89, 60));
+}
+body .whole-section .upper-side .right-books-section {
+  margin-top: 3rem;
+}
+body .whole-section .upper-side .right-books-section .upper-right-section {
+  box-shadow: 0 4px 8px 0 rgba(243, 241, 241, 0.2), 0 6px 20px 0 rgba(250, 247, 247, 0.19);
+  border-radius: 10px;
+  width: 800px;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+body .whole-section .upper-side .right-books-section .upper-right-section .book-details {
+  width: -moz-max-content;
+  width: max-content;
+}
+body .whole-section .upper-side .right-books-section .upper-right-section .book-details .details-column .view {
+  display: flex;
+  gap: 1rem;
+}
+body .whole-section .upper-side .right-books-section .upper-right-section .book-details .details-column .view #date_published {
+  width: -moz-max-content;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: 2px solid green;
+  background-color: green;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  height: 30px;
+}
+body .whole-section .upper-side .right-books-section .upper-right-section .book-details .details-column .view #date_published p {
+  font-weight: 700;
+  margin-left: 10px;
+}
+body .whole-section .upper-side .right-books-section .upper-right-section .book-details .details-column .view .delete_book {
+  cursor: pointer;
+  background-color: rgb(248, 79, 79);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-radius: 10px;
+}
+body .whole-section .upper-side .right-books-section .upper-right-section .book-details .details-column .view .delete_book:hover {
+  background-color: rgb(255, 115, 0);
+}
+body .whole-section .upper-side .right-books-section .upper-right-section .book-details .details-column .view .delete_book .button-div {
+  position: relative;
+}
+body .whole-section .upper-side .right-books-section .upper-right-section .book-details .details-column .view .delete_book .button-div button.delete {
+  color: white;
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+  width: 100px;
+  padding: 10px;
+  height: 100%;
+}
+body .whole-section .upper-side .right-books-section .upper-right-section .book-details .details-column .view .delete_book .button-div .popup {
+  position: absolute;
+  top: calc(100% + 30px);
+  left: -150%;
+  z-index: 1;
+  display: none;
+  background: linear-gradient(184deg, rgb(80, 58, 36) 17%, rgb(163, 112, 75) 50%, rgb(156, 110, 75) 75%, #c7935d 86%);
+  width: 250px;
+  border-radius: 10px;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+body .whole-section .upper-side .right-books-section .upper-right-section .book-details .details-column .view .delete_book .button-div .popup .qtn {
+  animation-name: warning;
+  animation-iteration-count: 4;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+}
+body .whole-section .upper-side .right-books-section .upper-right-section .book-details .details-column .view .delete_book .button-div .popup.active {
+  display: block;
+}
+body .whole-section .upper-side .right-books-section .upper-right-section .book-details .details-column .view .delete_book .button-div .popup .delete-options {
+  display: flex;
+  justify-content: center;
+}
+body .whole-section .upper-side .right-books-section .upper-right-section .book-details .details-column .view .delete_book .button-div .popup .delete-options a {
+  color: white;
+  text-decoration: none;
+  border: 1px solid white;
+  padding: 0 0.5rem;
+  border-radius: 5px;
+}
+body .whole-section .upper-side .right-books-section .upper-right-section .book-details .details-column .view .delete_book .button-div .popup .delete-options input {
+  border-top: 10px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: #e02a12;
+  border: none;
+  margin-top: 20px;
+  color: white;
+}
+body .whole-section .upper-side .right-books-section .upper-right-section .book-details .details-column .view .delete_book .button-div .popup .delete-options input:hover {
+  stroke-opacity: 0.5;
+}
+body .whole-section .upper-side .right-books-section .upper-right-section .book-details .details-column .view .delete_book .button-div .popup .delete-options input.submit-cancel {
+  background-color: red;
+  color: black;
+}
+body .whole-section .upper-side .right-books-section .upper-right-section .book-details .details-column .view .delete_book .button-div .popup .delete-options input#delete-book {
+  background-color: red;
+}
+body .whole-section .upper-side .right-books-section .upper-right-section .book-details .details-column .view .delete_book .button-div .popup .delete-options input#delete-book:hover {
+  box-shadow: 2px 5px 12px red;
+}
+body .whole-section .upper-side .right-books-section .upper-right-section .book-details .details-column .view .delete_book .button-div .popup .delete-options input#cancel-book {
+  background-color: #232223;
+  animation-name: cancel;
+  animation-iteration-count: infinite;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 2.3s;
+}
+body .whole-section .upper-side .right-books-section .upper-right-section .book-details .details-column .view .delete_book .button-div .popup .delete-options input#cancel-book:hover {
+  box-shadow: 2px 5px 12px black;
+}
+body .whole-section .upper-side .right-books-section .unavailable {
+  border: 5px solid salmon;
+  border-radius: 5px;
+  padding: 1rem;
+  width: 250px;
+  text-align: center;
+  height: 220px;
+  margin-top: 30px;
+  color: saddlebrown;
+}
+body .whole-section .upper-side .right-books-section .unavailable p:nth-of-type(2) {
+  margin-bottom: 40px;
+  color: white;
+  font-weight: 600;
+}
+body .whole-section .upper-side .right-books-section .unavailable a {
+  text-decoration: none;
+  background-color: green;
+  color: white;
+  padding: 10px 1.5rem;
+  border-radius: 10px;
+}
+body .whole-section .upper-side .right-books-section .unavailable a:hover {
+  background-color: transparent;
+  border: 1px solid green;
+  color: green;
+}
+body .lower-section .table {
+  margin: auto;
+  margin-top: 60px;
+  width: 90%;
+}
+body .lower-section .table .total_text {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 30px;
+}
+body .lower-section .table table {
+  border-bottom: 2px solid green;
+  border-collapse: collapse;
+  padding: 2rem;
+  width: 100%;
+}
+body .lower-section .table table thead {
+  background-color: rgb(245, 95, 25);
+  color: white;
+  height: 3rem;
+}
+body .lower-section .table table tbody tr {
+  height: 3rem;
+}
+body .lower-section .table table tbody tr:nth-of-type(even) {
+  background-color: rgb(97, 96, 96);
+}
+body .lower-section .table table tbody tr td {
+  text-align: center;
+}
+body .lower-section .table table tbody tr td #issue_book input#issue-btn {
+  border: 2px solid rgb(245, 95, 25);
+  background-color: rgb(245, 95, 25);
+  padding: 10px 1.5rem;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 15px;
+  border-radius: 10px;
+}
+body .lower-section .table table tbody tr td #issue_book input#issue-btn:nth-of-type(odd) {
+  background-color: green;
+}
+body .lower-section .table table tbody tr td #issue_book input#issue-btn:hover {
+  background-color: transparent;
+  color: rgb(245, 95, 25);
+}
+body .lower-section .table table tbody tr td #issue_book input#issue-btn.disabled {
+  pointer-events: none;
+  background-color: grey;
+}
+body #book_name {
+  font-size: 40px;
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(245, 95, 25);
+  font-style: italic;
+}
+
+@keyframes warning {
+  from {
+    color: red;
+  }
+  to {
+    color: white;
+  }
+}
+@keyframes cancel {
+  from {
+    background-color: black;
+  }
+  to {
+    background-color: green;
+  }
+}/*# sourceMappingURL=single.css.map */
